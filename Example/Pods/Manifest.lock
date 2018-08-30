@@ -1,0 +1,16 @@
+PODS:
+  - LearnTestDemo (0.1.0)
+
+DEPENDENCIES:
+  - LearnTestDemo (from `../`)
+
+EXTERNAL SOURCES:
+  LearnTestDemo:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LearnTestDemo: 8484a94909d2d0ad56faa2f354ccc5b3a00269a7
+
+PODFILE CHECKSUM: a8b7d7cb5080883a443a1685fbd0030b9c9dee66
+
+COCOAPODS: 1.5.3

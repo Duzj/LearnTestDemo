@@ -1,0 +1,6 @@
+framework module LearnTestDemo {
+  umbrella header "LearnTestDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
