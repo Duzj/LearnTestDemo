@@ -18,5 +18,13 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "LearnTestDemo/Classes/**/*"
+  "source_files": "DuzjKit/**/*",
+  "dependencies": {
+    "AFNetworking": [
+
+    ],
+    "Masonry": [
+
+    ]
+  }
 }

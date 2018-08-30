@@ -7,12 +7,23 @@
 //
 
 #import "ZJAppDelegate.h"
+#import "ZJMainTableViewController.h"
 
 @implementation ZJAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc]init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    ZJMainTableViewController *mainVC = [[ZJMainTableViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:mainVC];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
