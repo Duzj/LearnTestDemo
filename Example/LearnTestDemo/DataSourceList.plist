@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>runloop</string>
+		<key>controller</key>
+		<string>RunLoopTestViewController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>线程</string>
+		<key>controller</key>
+		<string>GCDTestViewController</string>
+	</dict>
+</array>
+</plist>

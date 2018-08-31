@@ -25,6 +25,7 @@
 		B89E7F02DFDD284762E37E69 /* libPods-LearnTestDemo_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 546E0A0720EF6C9C00906BC7 /* libPods-LearnTestDemo_Example.a */; };
 		CAAAE06F66442DDAFC1AE574 /* libPods-LearnTestDemo_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5210110B7BBB92996CEEBBC6 /* libPods-LearnTestDemo_Tests.a */; };
 		FB5E92772137A047003FD3CA /* ZJMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E92762137A047003FD3CA /* ZJMainTableViewController.m */; };
+		FB5E92872137C71F003FD3CA /* DataSourceList.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB5E92862137C71F003FD3CA /* DataSourceList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		BF2A50CF1261FCCF4C697983 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		FB5E92752137A047003FD3CA /* ZJMainTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJMainTableViewController.h; sourceTree = "<group>"; };
 		FB5E92762137A047003FD3CA /* ZJMainTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJMainTableViewController.m; sourceTree = "<group>"; };
+		FB5E92862137C71F003FD3CA /* DataSourceList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DataSourceList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				6003F5A6195388D20070C39A /* ZJViewController.m */,
 				FB5E92752137A047003FD3CA /* ZJMainTableViewController.h */,
 				FB5E92762137A047003FD3CA /* ZJMainTableViewController.m */,
+				FB5E92862137C71F003FD3CA /* DataSourceList.plist */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -286,6 +289,7 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				FB5E92872137C71F003FD3CA /* DataSourceList.plist in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

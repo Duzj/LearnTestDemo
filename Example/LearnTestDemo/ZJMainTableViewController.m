@@ -7,8 +7,11 @@
 //
 
 #import "ZJMainTableViewController.h"
+static NSString *const KCellIdentifier = @"KCellIdentifier";
 
 @interface ZJMainTableViewController ()
+
+@property (nonatomic ,strong) NSMutableArray *dataSource;
 
 @end
 
@@ -19,11 +22,23 @@
     self.title = @"testDemo";
     self.view.backgroundColor = [UIColor whiteColor];
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+//     self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+//     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"DataSourceList" ofType:@"plist"];
+    
+    self.dataSource = [NSMutableArray arrayWithContentsOfFile:sourcePath];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:KCellIdentifier];
+    [self.tableView setTableFooterView:[UIView new]];
+    [self.tableView reloadData];
+    NSLog(@"%@",self.dataSource);
 }
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -33,24 +48,33 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+//#warning Incomplete implementation, return the number of sections
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+//#warning Incomplete implementation, return the number of rows
+    return self.dataSource.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:KCellIdentifier forIndexPath:indexPath];
+    NSDictionary *currentDict = self.dataSource[indexPath.row];
+    cell.textLabel.text = currentDict[@"title"];
     return cell;
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *currentDict = self.dataSource[indexPath.row];
+    
+    Class class = NSClassFromString(currentDict[@"controller"]);
+    
+    UIViewController *vc = [[class alloc]init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -95,5 +119,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - getter/setter
+
+//- (NSMutableArray *)dataSource{
+//    if (!_dataSource) {
+//        _dataSource = [NSMutableArray arrayWithCapacity:0];
+//
+//    }
+//    return _dataSource;
+//}
 
 @end
