@@ -7,6 +7,10 @@
 //
 
 #import "ZJMainTableViewController.h"
+#import <malloc/malloc.h>
+#import <objc/runtime.h>
+#import "NSTimer+weak.h"
+
 static NSString *const KCellIdentifier = @"KCellIdentifier";
 
 @interface ZJMainTableViewController ()
@@ -34,6 +38,29 @@ static NSString *const KCellIdentifier = @"KCellIdentifier";
     [self.tableView setTableFooterView:[UIView new]];
     [self.tableView reloadData];
     NSLog(@"%@",self.dataSource);
+    
+    UIView *view = [[UIView alloc]init];
+//    view.frame = CGRectMake(0, 0, 300, 300);
+//    view.bounds = CGRectMake(0, 0, 50, 50);
+//    view.center = CGPointMake(100, 150);
+//    view.center = self.view.center;
+ 
+
+    view.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:view];
+    NSObject *obj = [NSObject new];
+    NSLog(@"Size of %@: %zd , %ld", NSStringFromClass([obj class]), malloc_size((__bridge const void *) obj),class_getInstanceSize([obj class]));
+    
+    UIImageView *imagevie = [[UIImageView alloc]init];
+    
+    [imagevie performSelector:@selector(setImage:) withObject:[UIImage new] afterDelay:0 inModes:@[NSDefaultRunLoopMode]];
+//    method_setImplementation(<#Method  _Nonnull m#>, <#IMP  _Nonnull imp#>)
+    
+    
+    __weak NSString *stre = @"dsdfas";
+    
+    NSLog(@"%@",stre);
+    
 }
 
 

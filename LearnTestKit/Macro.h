@@ -10,11 +10,11 @@
 
 
 
-#ifdef DEBUG
-# define NSLog(fmt, ...) NSLog((@"\n[File:%s]\n" "[Function:%s]\n" "[Line:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
-#else
-# define NSLog(...);
-#endif
+//#ifdef DEBUG
+//# define NSLog(fmt, ...) NSLog((@"\n[File:%s]\n" "[Function:%s]\n" "[Line:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+//#else
+//# define NSLog(...);
+//#endif
 
 
 //weak strong 引用

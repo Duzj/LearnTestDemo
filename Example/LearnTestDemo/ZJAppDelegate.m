@@ -15,6 +15,12 @@
 {
     // Override point for customization after application launch.
     
+//    NSArray *array = @[@2,@3];
+//    NSLog(@"%p",array);
+//    NSString *dd = @"ddd";
+//    int  ss = 3;
+//    int  *tt = &ss;
+    
     self.window = [[UIWindow alloc]init];
     self.window.frame = [UIScreen mainScreen].bounds;
     self.window.backgroundColor = [UIColor whiteColor];
