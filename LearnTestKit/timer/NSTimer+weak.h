@@ -13,4 +13,5 @@
 
 
 + (NSTimer *)weakTimerWithTimeInterval:(NSTimeInterval)ti repeats:(BOOL)yesOrNo completeBlock:(void (^)(NSTimer *timer))block;
+
 @end

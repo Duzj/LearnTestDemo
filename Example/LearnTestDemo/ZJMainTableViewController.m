@@ -10,6 +10,7 @@
 #import <malloc/malloc.h>
 #import <objc/runtime.h>
 #import "NSTimer+weak.h"
+#import "EnCodeTestModel2.h"
 
 static NSString *const KCellIdentifier = @"KCellIdentifier";
 
@@ -28,8 +29,22 @@ static NSString *const KCellIdentifier = @"KCellIdentifier";
     // Uncomment the following line to preserve selection between presentations.
 //     self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    EnCodeTestModel2 *model2 = [EnCodeTestModel2 new];
+    model2.name = @"fads";
+    model2.name1 = @"fads";
+    model2.name2 = @"fads";
+    model2.name3 = @"fads";
+    model2.name4 = @"fads";
+
+    NSData *aData = [NSKeyedArchiver archivedDataWithRootObject:model2];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:aData forKey:@"testfdafa"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    NSData *dData = [[NSUserDefaults standardUserDefaults] valueForKey:@"testfdafa"];
+    EnCodeTestModel2 *model3 =  [NSKeyedUnarchiver unarchiveObjectWithData:dData];
+    
     
     NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"DataSourceList" ofType:@"plist"];
     
@@ -54,7 +69,6 @@ static NSString *const KCellIdentifier = @"KCellIdentifier";
     UIImageView *imagevie = [[UIImageView alloc]init];
     
     [imagevie performSelector:@selector(setImage:) withObject:[UIImage new] afterDelay:0 inModes:@[NSDefaultRunLoopMode]];
-//    method_setImplementation(<#Method  _Nonnull m#>, <#IMP  _Nonnull imp#>)
     
     
     __weak NSString *stre = @"dsdfas";

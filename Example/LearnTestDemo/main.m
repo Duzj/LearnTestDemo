@@ -21,6 +21,14 @@ void testFun( int n, void (*test)(int t)){
 int main(int argc, char * argv[])
 {
     testFun(10, testLog);
+    
+    
+    int a[4] = {1,2,3,4};
+    
+    int *b = a;
+    
+    printf("%d",b[1]);
+    
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([ZJAppDelegate class]));
     }

@@ -32,12 +32,13 @@
 }
 
 - (void)removeAssociate{
+    //这个会移除所有关联对象
+//    objc_removeAssociatedObjects(self);
     objc_setAssociatedObject(self, @selector(associate), nil, OBJC_ASSOCIATION_RETAIN);
 }
 
 - (NSString *)associate{
     //_cmd
-    
     return objc_getAssociatedObject(self, _cmd);
 }
 
