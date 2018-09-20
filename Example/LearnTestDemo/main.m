@@ -25,6 +25,8 @@ int main(int argc, char * argv[])
     
     int a[4] = {1,2,3,4};
     
+    printf("%lu , %lu",sizeof(a),sizeof(a[0]));
+    
     int *b = a;
     
     printf("%d",b[1]);
