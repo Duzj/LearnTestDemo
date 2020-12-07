@@ -22,7 +22,7 @@ pod 'LearnTestDemo'
 
 ## Author
 
-Duzj, duzhijian@syswin.com
+Duzj
 
 ## License
 

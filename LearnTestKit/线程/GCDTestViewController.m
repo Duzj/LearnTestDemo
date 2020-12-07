@@ -2,7 +2,7 @@
 //  GCDTestViewController.m
 //  LearnTestDemo
 //
-//  Created by 杜志坚 on 2018/8/31.
+//  Created by du on 2018/8/31.
 //
 
 #import "GCDTestViewController.h"

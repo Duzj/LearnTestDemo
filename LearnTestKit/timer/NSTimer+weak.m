@@ -2,7 +2,7 @@
 //  NSTimer+weak.m
 //  LearnTestDemo
 //
-//  Created by 杜志坚 on 2018/9/13.
+//  Created by du on 2018/9/13.
 //
 
 #import "NSTimer+weak.h"
